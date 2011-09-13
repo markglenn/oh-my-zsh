@@ -1,0 +1,2 @@
+#compdef gr
+_files -W "$(git rev-parse --show-toplevel)"
