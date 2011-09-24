@@ -1,2 +1,5 @@
 #compdef gr
-_files -W "$(git rev-parse --show-toplevel)"
+local git_path="$(git rev-parse --show-toplevel)"
+if [[ -d "$git_path" ]]; then
+  _files -W "$git_path"
+fi
