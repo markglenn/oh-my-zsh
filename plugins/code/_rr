@@ -1,0 +1,12 @@
+#compdef rr
+local curr_path=`pwd`
+while [[ ! -d $curr_path/script ]] || [[ ! -d $curr_path/app ]] ; do
+  curr_path=`dirname $curr_path`
+
+  if [[ $curr_path == '/' ]] ; then 
+    return
+  fi
+
+done
+
+_files -W "$curr_path"
