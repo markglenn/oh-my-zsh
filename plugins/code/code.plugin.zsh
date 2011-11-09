@@ -12,7 +12,7 @@ function c(){
   fi
 }
 
-function gr(){
+function gg(){
   local git_path="$(git rev-parse --show-toplevel)"
 
   if [[ -d "$git_path/.git" ]]; then
