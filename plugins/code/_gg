@@ -1,4 +1,4 @@
-#compdef gr
+#compdef gg
 local git_path="$(git rev-parse --show-toplevel)"
 if [[ -d "$git_path" ]]; then
   _files -W "$git_path"
