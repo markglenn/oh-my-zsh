@@ -84,7 +84,7 @@ alias gpoat='git push origin --all && git push origin --tags'
 alias gmt='git mergetool --no-prompt'
 compdef _git gm=git-mergetool
 
-alias gg='git gui citool'
+#alias gg='git gui citool'
 alias gga='git gui citool --amend'
 alias gk='gitk --all --branches'
 
@@ -96,6 +96,8 @@ alias gstd='git stash drop'
 # Will cd into the top of the current repository
 # or submodule.
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
+alias gg='git grep'
+compdef _git gg=git-grep
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
