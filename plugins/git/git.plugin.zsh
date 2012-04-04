@@ -160,5 +160,5 @@ alias gunignore='git update-index --no-assume-unchanged'
 # list temporarily ignored files
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 
-
-
+alias greset='git reset --hard origin/$(current_branch)'
+compdef greset=git
