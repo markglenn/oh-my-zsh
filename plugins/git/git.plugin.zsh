@@ -61,3 +61,5 @@ alias ggpush='git push origin $(current_branch)'
 compdef ggpush=git
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
 compdef ggpnp=git
+alias greset='git reset --hard origin/$(current_branch)'
+compdef greset=git
