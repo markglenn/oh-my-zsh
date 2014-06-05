@@ -97,6 +97,8 @@ alias gstd='git stash drop'
 # Will cd into the top of the current repository
 # or submodule.
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
+alias gg='git grep'
+compdef _git gg=git-grep
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
@@ -160,3 +162,6 @@ alias gignore='git update-index --assume-unchanged'
 alias gunignore='git update-index --no-assume-unchanged'
 # list temporarily ignored files
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
+
+alias greset='git reset --hard origin/$(current_branch)'
+compdef greset=git
